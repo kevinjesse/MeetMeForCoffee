@@ -13,7 +13,6 @@
 		1B0C1BAA1C3DB5E10019074C /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B0C1BA41C3DB5E10019074C /* FBSDKShareKit.framework */; };
 		1B0C1BAB1C3DB5E10019074C /* FacebookSDKStrings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1B0C1BA51C3DB5E10019074C /* FacebookSDKStrings.bundle */; };
 		1B0C1BAC1C3DB5E10019074C /* FBAudienceNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B0C1BA61C3DB5E10019074C /* FBAudienceNetwork.framework */; };
-		1B42D2EB1C48A138007243E2 /* QuiltTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B42D2EA1C48A138007243E2 /* QuiltTabController.swift */; };
 		1B4DB28C1C4DA863006AD66F /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B4DB28B1C4DA863006AD66F /* ParseFacebookUtils.framework */; };
 		1B73FC501C3F275000AA417D /* billabong.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1B73FC4E1C3F275000AA417D /* billabong.ttf */; };
 		1B73FC511C3F275000AA417D /* FreightSans Book.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1B73FC4F1C3F275000AA417D /* FreightSans Book.ttf */; };
@@ -32,6 +31,9 @@
 		1B73FC6B1C3F4D7900AA417D /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B73FC6A1C3F4D7900AA417D /* Social.framework */; };
 		1B73FC6D1C3F4D7E00AA417D /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B73FC6C1C3F4D7E00AA417D /* Accounts.framework */; };
 		1B9687F71C41AE6C003A95A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B9687F61C41AE6C003A95A2 /* Main.storyboard */; };
+		1BB9A1C61C4DBC10001E3E89 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BB9A1C51C4DBC10001E3E89 /* MapKit.framework */; };
+		1BB9A1C81C4DBD7D001E3E89 /* MeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB9A1C71C4DBD7D001E3E89 /* MeController.swift */; };
+		1BB9A1CA1C4DC848001E3E89 /* MeetupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB9A1C91C4DC848001E3E89 /* MeetupController.swift */; };
 		1BE3832D1C3DC1CC00D70298 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1BE3832C1C3DC1CC00D70298 /* Info.plist */; };
 		814C3ACB1B69877600E307BB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 814C3AC81B69877600E307BB /* Images.xcassets */; };
 		81BA814B1A49DA1800E65899 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BA814A1A49DA1800E65899 /* AppDelegate.swift */; };
@@ -51,7 +53,6 @@
 		1B0C1BA41C3DB5E10019074C /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = "../../Downloads/FacebookSDKs-iOS-20151111/FBSDKShareKit.framework"; sourceTree = "<group>"; };
 		1B0C1BA51C3DB5E10019074C /* FacebookSDKStrings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = FacebookSDKStrings.bundle; path = "../../Downloads/FacebookSDKs-iOS-20151111/FacebookSDKStrings.bundle"; sourceTree = "<group>"; };
 		1B0C1BA61C3DB5E10019074C /* FBAudienceNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBAudienceNetwork.framework; path = "../../Downloads/FacebookSDKs-iOS-20151111/FBAudienceNetwork.framework"; sourceTree = "<group>"; };
-		1B42D2EA1C48A138007243E2 /* QuiltTabController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuiltTabController.swift; sourceTree = "<group>"; };
 		1B4DB28B1C4DA863006AD66F /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
 		1B73FC4E1C3F275000AA417D /* billabong.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = billabong.ttf; sourceTree = "<group>"; };
 		1B73FC4F1C3F275000AA417D /* FreightSans Book.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FreightSans Book.ttf"; sourceTree = "<group>"; };
@@ -70,10 +71,13 @@
 		1B73FC6A1C3F4D7900AA417D /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		1B73FC6C1C3F4D7E00AA417D /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		1B9687F61C41AE6C003A95A2 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		1BB9A1C51C4DBC10001E3E89 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		1BB9A1C71C4DBD7D001E3E89 /* MeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeController.swift; sourceTree = "<group>"; };
+		1BB9A1C91C4DC848001E3E89 /* MeetupController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeetupController.swift; sourceTree = "<group>"; };
 		1BE3832C1C3DC1CC00D70298 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		814C3AC81B69877600E307BB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		814C3AC91B69877600E307BB /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		81BA81451A49DA1800E65899 /* ParseStarterProject-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ParseStarterProject-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		81BA81451A49DA1800E65899 /* MeetForCoffee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeetForCoffee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81BA814A1A49DA1800E65899 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81BA814C1A49DA1800E65899 /* AccountController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountController.swift; sourceTree = "<group>"; };
 		81BA816B1A49DB6800E65899 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
@@ -91,6 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BB9A1C61C4DBC10001E3E89 /* MapKit.framework in Frameworks */,
 				1B73FC6D1C3F4D7E00AA417D /* Accounts.framework in Frameworks */,
 				1B73FC6B1C3F4D7900AA417D /* Social.framework in Frameworks */,
 				1B73FC691C3F4C2100AA417D /* StoreKit.framework in Frameworks */,
@@ -146,7 +151,7 @@
 		81BA81461A49DA1800E65899 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				81BA81451A49DA1800E65899 /* ParseStarterProject-Swift.app */,
+				81BA81451A49DA1800E65899 /* MeetForCoffee.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -158,7 +163,8 @@
 				81BA814A1A49DA1800E65899 /* AppDelegate.swift */,
 				81BA814C1A49DA1800E65899 /* AccountController.swift */,
 				1B73FC541C3F40D100AA417D /* LoginViewController.swift */,
-				1B42D2EA1C48A138007243E2 /* QuiltTabController.swift */,
+				1BB9A1C71C4DBD7D001E3E89 /* MeController.swift */,
+				1BB9A1C91C4DC848001E3E89 /* MeetupController.swift */,
 			);
 			path = ParseStarterProject;
 			sourceTree = "<group>";
@@ -166,6 +172,7 @@
 		81BA816A1A49DB5600E65899 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1BB9A1C51C4DBC10001E3E89 /* MapKit.framework */,
 				1B4DB28B1C4DA863006AD66F /* ParseFacebookUtils.framework */,
 				1B73FC6C1C3F4D7E00AA417D /* Accounts.framework */,
 				1B73FC6A1C3F4D7900AA417D /* Social.framework */,
@@ -225,7 +232,7 @@
 			);
 			name = "ParseStarterProject-Swift";
 			productName = ParseStarterProject;
-			productReference = 81BA81451A49DA1800E65899 /* ParseStarterProject-Swift.app */;
+			productReference = 81BA81451A49DA1800E65899 /* MeetForCoffee.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -303,7 +310,8 @@
 				1B73FC551C3F40D100AA417D /* LoginViewController.swift in Sources */,
 				81BA814D1A49DA1800E65899 /* AccountController.swift in Sources */,
 				81BA814B1A49DA1800E65899 /* AppDelegate.swift in Sources */,
-				1B42D2EB1C48A138007243E2 /* QuiltTabController.swift in Sources */,
+				1BB9A1C81C4DBD7D001E3E89 /* MeController.swift in Sources */,
+				1BB9A1CA1C4DC848001E3E89 /* MeetupController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,7 +411,7 @@
 				INFOPLIST_FILE = Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = MeetMeForCoffee;
-				PRODUCT_NAME = "ParseStarterProject-Swift";
+				PRODUCT_NAME = MeetForCoffee;
 				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
@@ -422,7 +430,7 @@
 				INFOPLIST_FILE = Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = MeetMeForCoffee;
-				PRODUCT_NAME = "ParseStarterProject-Swift";
+				PRODUCT_NAME = MeetForCoffee;
 				PROVISIONING_PROFILE = "";
 			};
 			name = Release;

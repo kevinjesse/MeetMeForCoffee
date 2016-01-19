@@ -10,29 +10,10 @@
         </mutableArray>
     </customFonts>
     <scenes>
-        <!--Fabrics-->
-        <scene sceneID="8gh-Qq-J3D">
-            <objects>
-                <viewController id="yKK-kb-INd" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Krh-HQ-hYL"/>
-                        <viewControllerLayoutGuide type="bottom" id="R2g-rz-vb4"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="dzc-UD-JUD">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Fabrics" image="Categorize-50" id="dXD-mS-fcT"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="j31-ST-hT4" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1655" y="745"/>
-        </scene>
-        <!--Quilts-->
+        <!--Meet For Coffee-->
         <scene sceneID="JHT-SK-0yd">
             <objects>
-                <viewController id="OvB-0i-hem" customClass="QuiltTabController" customModule="ParseStarterProject_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="OvB-0i-hem" customClass="MeetupController" customModule="MeetForCoffee" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kiI-z0-VJY"/>
                         <viewControllerLayoutGuide type="bottom" id="dgg-h0-LMx"/>
@@ -40,16 +21,35 @@
                     <view key="view" contentMode="scaleToFill" id="beH-S5-6IH">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" prompt="Search Discussion Topics" placeholder="Ex: Software Engineering" translatesAutoresizingMaskIntoConstraints="NO" id="79L-mi-kQU">
+                                <rect key="frame" x="0.0" y="20" width="600" height="75"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="search"/>
+                            </searchBar>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="79L-mi-kQU" secondAttribute="trailing" id="bJi-BL-CZb"/>
+                            <constraint firstItem="79L-mi-kQU" firstAttribute="top" secondItem="kiI-z0-VJY" secondAttribute="bottom" id="eub-3B-4SG"/>
+                            <constraint firstItem="79L-mi-kQU" firstAttribute="leading" secondItem="beH-S5-6IH" secondAttribute="leading" id="qxo-hE-Bz8"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Quilts" image="Sheets-50" id="lTP-DU-lCq"/>
+                    <tabBarItem key="tabBarItem" title="Meet For Coffee" image="Hot Chocolate-50" id="lTP-DU-lCq"/>
                     <connections>
-                        <outlet property="quiltTab" destination="lTP-DU-lCq" id="9hh-LS-V8R"/>
+                        <outlet property="searchDisplayController" destination="cUe-2J-7Ib" id="ksp-cH-d5a"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="grl-J2-tjt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="cUe-2J-7Ib">
+                    <connections>
+                        <outlet property="delegate" destination="OvB-0i-hem" id="LH6-h9-NIo"/>
+                        <outlet property="searchContentsController" destination="OvB-0i-hem" id="yN9-AC-peY"/>
+                        <outlet property="searchResultsDataSource" destination="OvB-0i-hem" id="Mwh-wW-hVs"/>
+                        <outlet property="searchResultsDelegate" destination="OvB-0i-hem" id="gfc-dj-Ovs"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="-1663" y="-11"/>
+            <point key="canvasLocation" x="-1665" y="-16"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="e6a-q9-waW">
@@ -62,9 +62,6 @@
                     </tabBar>
                     <connections>
                         <segue destination="OvB-0i-hem" kind="relationship" relationship="viewControllers" id="kyk-zS-4pE"/>
-                        <segue destination="yKK-kb-INd" kind="relationship" relationship="viewControllers" id="fgg-RV-445"/>
-                        <segue destination="ffe-uf-MVu" kind="relationship" relationship="viewControllers" id="LSh-Rf-fIJ"/>
-                        <segue destination="MAo-O5-Grc" kind="relationship" relationship="viewControllers" id="VS9-eg-W2u"/>
                         <segue destination="20H-1x-990" kind="relationship" relationship="viewControllers" id="aPB-0a-dVL"/>
                     </connections>
                 </tabBarController>
@@ -75,7 +72,7 @@
         <!--Login View Controller-->
         <scene sceneID="Nft-qj-alF">
             <objects>
-                <viewController id="rv8-bT-m3P" customClass="LoginViewController" customModule="ParseStarterProject_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="rv8-bT-m3P" customClass="LoginViewController" customModule="MeetForCoffee" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="joq-1l-OnR"/>
                         <viewControllerLayoutGuide type="bottom" id="Gdj-TX-Hys"/>
@@ -90,12 +87,12 @@
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="1Aa-B6-Mkf">
                                 <rect key="frame" x="282" y="281" width="37" height="37"/>
                             </activityIndicatorView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quilts For You" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FeP-BR-poA">
-                                <rect key="frame" x="133" y="182" width="334" height="56"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meet Me For Coffee" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FeP-BR-poA">
+                                <rect key="frame" x="91" y="186" width="418" height="87"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="334" id="Atv-Zs-B3z"/>
+                                    <constraint firstAttribute="width" constant="418" id="Atv-Zs-B3z"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Billabong" family="Billabong" pointSize="70"/>
+                                <fontDescription key="fontDescription" name="Billabong" family="Billabong" pointSize="60"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -104,12 +101,12 @@
                         <constraints>
                             <constraint firstItem="ECd-GJ-LnL" firstAttribute="bottom" secondItem="Gdj-TX-Hys" secondAttribute="top" id="2K6-dp-MXI"/>
                             <constraint firstItem="ECd-GJ-LnL" firstAttribute="top" secondItem="Sv6-Da-pCa" secondAttribute="top" id="EGL-2A-mEN"/>
-                            <constraint firstItem="FeP-BR-poA" firstAttribute="top" secondItem="joq-1l-OnR" secondAttribute="bottom" constant="162" id="Gki-In-VUC"/>
+                            <constraint firstItem="FeP-BR-poA" firstAttribute="top" secondItem="joq-1l-OnR" secondAttribute="bottom" constant="166" id="Gki-In-VUC"/>
                             <constraint firstItem="1Aa-B6-Mkf" firstAttribute="centerX" secondItem="FeP-BR-poA" secondAttribute="centerX" id="KYr-EP-kjB"/>
                             <constraint firstItem="1Aa-B6-Mkf" firstAttribute="centerY" secondItem="ECd-GJ-LnL" secondAttribute="centerY" id="SOD-jT-eUa"/>
                             <constraint firstAttribute="trailing" secondItem="ECd-GJ-LnL" secondAttribute="trailing" id="bhI-RF-oVC"/>
                             <constraint firstItem="ECd-GJ-LnL" firstAttribute="leading" secondItem="Sv6-Da-pCa" secondAttribute="leading" id="fwW-pR-NFM"/>
-                            <constraint firstItem="Gdj-TX-Hys" firstAttribute="top" secondItem="FeP-BR-poA" secondAttribute="bottom" constant="362" id="iqb-9d-NDL"/>
+                            <constraint firstItem="Gdj-TX-Hys" firstAttribute="top" secondItem="FeP-BR-poA" secondAttribute="bottom" constant="327" id="iqb-9d-NDL"/>
                             <constraint firstItem="FeP-BR-poA" firstAttribute="centerX" secondItem="ECd-GJ-LnL" secondAttribute="centerX" id="tQi-Ko-vwo"/>
                         </constraints>
                     </view>
@@ -123,48 +120,10 @@
             </objects>
             <point key="canvasLocation" x="-1166" y="-1992"/>
         </scene>
-        <!--Decorative-->
-        <scene sceneID="8GW-OD-G9j">
-            <objects>
-                <viewController id="ffe-uf-MVu" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jDu-vm-1Jj"/>
-                        <viewControllerLayoutGuide type="bottom" id="4C4-qt-mU0"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Ekg-y1-0EY">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Decorative" image="Curtains-50" id="hK9-gJ-vJ0"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yWT-gM-klE" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1033" y="-11"/>
-        </scene>
-        <!--Baby/Children-->
-        <scene sceneID="dr8-vI-Drx">
-            <objects>
-                <viewController id="MAo-O5-Grc" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="xtJ-jG-uLh"/>
-                        <viewControllerLayoutGuide type="bottom" id="Idt-o4-aAJ"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="M9h-UY-yhr">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Baby/Children" image="Pacifier-50" id="Kof-fU-Gjq"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="c07-il-sdl" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-985" y="745"/>
-        </scene>
-        <!--Account-->
+        <!--Me-->
         <scene sceneID="1hg-Ba-e2d">
             <objects>
-                <viewController id="20H-1x-990" customClass="AccountController" customModule="ParseStarterProject_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="20H-1x-990" customClass="AccountController" customModule="MeetForCoffee" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6fU-iI-ITY"/>
                         <viewControllerLayoutGuide type="bottom" id="8Nq-3P-143"/>
@@ -173,36 +132,53 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NGe-hZ-iAD">
-                                <rect key="frame" x="276" y="444" width="48" height="30"/>
-                                <state key="normal" title="Logout"/>
-                                <connections>
-                                    <action selector="logout:" destination="20H-1x-990" eventType="touchUpInside" id="yrH-qS-eko"/>
-                                </connections>
-                            </button>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="aIS-Gf-qfM">
+                                <rect key="frame" x="0.0" y="64" width="600" height="279"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="279" id="sHB-rs-Uoq"/>
+                                </constraints>
+                            </mapView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pEi-tL-xLw">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="Me" id="q5E-RF-TOu">
+                                        <barButtonItem key="leftBarButtonItem" title="Karma" id="fXs-e8-U27"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0Wf-I4-ttQ">
+                                <rect key="frame" x="0.0" y="390" width="600" height="161"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="8Nq-3P-143" firstAttribute="top" secondItem="NGe-hZ-iAD" secondAttribute="bottom" constant="77" id="RpA-IK-NBt"/>
-                            <constraint firstItem="NGe-hZ-iAD" firstAttribute="centerX" secondItem="hZf-A4-zJX" secondAttribute="centerX" id="hN7-mX-WW6"/>
+                            <constraint firstItem="aIS-Gf-qfM" firstAttribute="leading" secondItem="pEi-tL-xLw" secondAttribute="leading" id="AHB-Fh-YEZ"/>
+                            <constraint firstItem="aIS-Gf-qfM" firstAttribute="top" secondItem="pEi-tL-xLw" secondAttribute="bottom" id="FaV-ru-faV"/>
+                            <constraint firstItem="0Wf-I4-ttQ" firstAttribute="trailing" secondItem="aIS-Gf-qfM" secondAttribute="trailing" id="Ly8-q5-Rb9"/>
+                            <constraint firstItem="0Wf-I4-ttQ" firstAttribute="top" secondItem="aIS-Gf-qfM" secondAttribute="bottom" constant="47" id="hS5-qr-3Ta"/>
+                            <constraint firstItem="pEi-tL-xLw" firstAttribute="trailing" secondItem="aIS-Gf-qfM" secondAttribute="trailing" id="k5e-04-jqW"/>
+                            <constraint firstItem="0Wf-I4-ttQ" firstAttribute="bottom" secondItem="8Nq-3P-143" secondAttribute="top" id="pRO-9t-Ssr"/>
+                            <constraint firstAttribute="trailing" secondItem="pEi-tL-xLw" secondAttribute="trailing" id="r9W-HT-FVZ"/>
+                            <constraint firstItem="pEi-tL-xLw" firstAttribute="leading" secondItem="hZf-A4-zJX" secondAttribute="leading" id="wVX-bR-dHZ"/>
+                            <constraint firstItem="0Wf-I4-ttQ" firstAttribute="leading" secondItem="aIS-Gf-qfM" secondAttribute="leading" id="yMb-xE-bfv"/>
+                            <constraint firstItem="pEi-tL-xLw" firstAttribute="top" secondItem="6fU-iI-ITY" secondAttribute="bottom" id="z0C-vN-JNj"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Account" image="Account" id="WUy-bq-tYd"/>
+                    <tabBarItem key="tabBarItem" title="Me" image="Account" id="WUy-bq-tYd"/>
                     <connections>
+                        <outlet property="MeMap" destination="aIS-Gf-qfM" id="Ibw-2c-obQ"/>
                         <segue destination="rv8-bT-m3P" kind="presentation" identifier="goLogin" modalTransitionStyle="flipHorizontal" id="wRc-cL-SfG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VOQ-YJ-UZr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-393" y="-11"/>
+            <point key="canvasLocation" x="-409" y="-1184"/>
         </scene>
     </scenes>
     <resources>
         <image name="Account" width="25" height="25"/>
-        <image name="Categorize-50" width="25" height="25"/>
-        <image name="Curtains-50" width="25" height="25"/>
-        <image name="Pacifier-50" width="25" height="25"/>
-        <image name="Sheets-50" width="25" height="25"/>
-        <image name="bg" width="100" height="178"/>
+        <image name="Hot Chocolate-50" width="25" height="25"/>
+        <image name="bg" width="540" height="960"/>
     </resources>
 </document>

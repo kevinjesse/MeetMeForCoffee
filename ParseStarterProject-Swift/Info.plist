@@ -7,7 +7,7 @@
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
-	<string>DoggIt</string>
+	<string>MeetMeForCoffee</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -37,9 +37,9 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>FacebookAppID</key>
-	<string>946461952114525</string>
+	<string>1531979370434259</string>
 	<key>FacebookDisplayName</key>
-	<string>Quilts For You</string>
+	<string>MeetMeForCoffee</string>
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
@@ -47,7 +47,7 @@
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>fb946461952114525</string>
+				<string>fb1531979370434259</string>
 			</array>
 		</dict>
 	</array>
